@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.16
-MAINTAINER nando
+MAINTAINER hernandito
 
 # Set correct environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -21,12 +21,15 @@ CMD ["/sbin/my_init"]
  usermod -d /home nobody && \
  chown -R nobody:users /home
 
-
+RUN add-apt-repository ppa:mc3man/trusty-media
 RUN apt-get update 
 RUN apt-get install -qy mc
 RUN apt-get install -qy tmux
 RUN apt-get install -qy php5-mysql
-RUN apt-get install -qy php5-mysqlnd
+RUN apt-get install -qy php5-mysqlnd libimage-exiftool-perl antiword poppler-utils ffmpeg libav-tools libavcodec-extra-54 libavformat-extra-54 libgs-dev gs-esp ghostscript
+
+
+
 
 
 # Install proxy Dependencies
