@@ -26,10 +26,16 @@ RUN apt-get update
 RUN apt-get install -qy mc
 RUN apt-get install -qy tmux
 RUN apt-get install -qy php5-mysql
-RUN apt-get install -qy php5-mysqlnd libimage-exiftool-perl antiword poppler-utils ffmpeg libav-tools libavcodec-extra-54 libavformat-extra-54 libgs-dev gs-esp ghostscript
-
-
-
+RUN apt-get install -qy php5-mysqlnd 
+RUN apt-get install -qy libimage-exiftool-perl 
+RUN apt-get install -qy antiword 
+RUN apt-get install -qy poppler-utils 
+RUN apt-get install -qy ffmpeg 
+RUN apt-get install -qy libav-tools 
+RUN apt-get install -qy libavcodec-extra-54 
+RUN apt-get install -qy libavformat-extra-54 
+RUN apt-get install -qy libgs-dev gs-esp 
+RUN apt-get install -qy ghostscript
 
 
 # Install proxy Dependencies
