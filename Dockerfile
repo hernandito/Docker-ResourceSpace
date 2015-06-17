@@ -75,8 +75,11 @@ echo /var/lock/apache2 > /etc/container_environment/APACHE_LOCK_DIR && \
 echo /var/run/apache2.pid > /etc/container_environment/APACHE_PID_FILE && \
 echo /var/run/apache2 > /etc/container_environment/APACHE_RUN_DIR
 
-#RUN mkdir /var/www/resourcespace
-ADD resourcespace/ /var/www/resourcespace/
+RUN mkdir /home/resourcespace
+ADD resourcespace/ /home/resourcespace/
+RUN mv /home/resourcespace/ /var/www/
+
+
 
 
 # Expose Ports
