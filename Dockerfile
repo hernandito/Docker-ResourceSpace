@@ -35,7 +35,7 @@ RUN apt-get install -qy libav-tools
 RUN apt-get install -qy libavcodec-extra-54 
 RUN apt-get install -qy libavformat-extra-54 
 RUN apt-get install -qy libgs-dev 
-RUN apt-get install -qy gs-esp 
+#RUN apt-get install -qy gs-esp 
 RUN apt-get install -qy ghostscript
 
 
@@ -74,6 +74,10 @@ echo /var/log/apache2 > /etc/container_environment/APACHE_LOG_DIR && \
 echo /var/lock/apache2 > /etc/container_environment/APACHE_LOCK_DIR && \
 echo /var/run/apache2.pid > /etc/container_environment/APACHE_PID_FILE && \
 echo /var/run/apache2 > /etc/container_environment/APACHE_RUN_DIR
+
+mkdir /var/www/resourcespace
+ADD resourcespace/ /var/www/resourcespace/
+
 
 # Expose Ports
 EXPOSE 80 443
