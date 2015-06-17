@@ -8,6 +8,12 @@ else
   mv /etc/apache2/000-default.conf /config/proxy-config.conf
  fi
 
-
+# Check if ResourceSpace exists. If not, copy from /home
+if [ -f /web/resourcespace/index.php ]; then
+  echo "Using existing ResourceSpace install."
+else
+  echo "Copying ResourceSpace into Web folder."
+  mv /home/resourcespace/ /web/
+ fi
 
 
