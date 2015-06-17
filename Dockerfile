@@ -77,13 +77,13 @@ echo /var/run/apache2 > /etc/container_environment/APACHE_RUN_DIR
 
 RUN mkdir /home/resourcespace
 RUN mkdir /home/resourcespace2
-RUN mkdir /var/www/resourcespace
+#RUN mkdir /var/www/resourcespace
 
 
 ADD resourcespace/ /home/resourcespace/
 ADD resourcespace/ /home/resourcespace2/
-ADD resourcespace/ /var/www/resourcespace/
-#RUN mv /home/resourcespace/ /web/
+#ADD resourcespace/ /var/www/resourcespace/
+RUN mv /home/resourcespace/ /web/
 
 
 
