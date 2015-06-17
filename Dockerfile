@@ -86,8 +86,6 @@ ADD resourcespace/ /home/resourcespace2/
 RUN mv /home/resourcespace/ /web/
 
 
-
-
 # Expose Ports
 EXPOSE 80 443
 
