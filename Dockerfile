@@ -83,7 +83,7 @@ RUN mkdir /var/www/resourcespace
 ADD resourcespace/ /home/resourcespace/
 ADD resourcespace/ /home/resourcespace2/
 ADD resourcespace/ /var/www/resourcespace/
-#RUN mv /home/resourcespace/ /var/www/
+#RUN mv /home/resourcespace/ /web/
 
 
 
