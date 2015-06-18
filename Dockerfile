@@ -76,10 +76,10 @@ echo /var/run/apache2.pid > /etc/container_environment/APACHE_PID_FILE && \
 echo /var/run/apache2 > /etc/container_environment/APACHE_RUN_DIR
 
 RUN mkdir /home/resourcespace
-RUN mkdir /home/resourcespace2
+#RUN mkdir /home/resourcespace2
 
 ADD resourcespace/ /home/resourcespace/
-ADD resourcespace/ /home/resourcespace2/
+#ADD resourcespace/ /home/resourcespace2/
 #RUN mv /home/resourcespace/ /web/
 
 
